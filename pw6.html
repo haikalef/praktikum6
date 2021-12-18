@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>PT. Once Sejahtera</h1>
+    <style>
+        h1 {
+            text-align: left;
+            color: #04AA6D;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 50%;
+        }
+        
+        th, td {
+          text-align: center;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even){background-color: #f2f2f2}
+        
+        th {
+          background-color: #04AA6D;
+          color: white;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <title>Praktikum 6</title>
+</head>
+<body>
+
+<table>
+        <thead>
+        <tr>
+            <th>Kategori</th>
+            <th>Abodemen</th>
+            <th>Tarif per-KWH</th>
+            <th>Pajak</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Sosial</td>
+            <td>10000</td>
+            <td>300</td>
+            <td>0%</td>
+        </tr>
+        <tr>
+            <td>Rumah</td>
+            <td>30000</td>
+            <td>500</td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td>Apartemen</td>
+            <td>50000</td>
+            <td>750</td>
+            <td>15%</td>
+        </tr>
+        <tr>
+            <td>Industri</td>
+            <td>75000</td>
+            <td>1000</td>
+            <td>20%</td>
+        </tr>
+        <tr>
+            <td>Villa</td>
+            <td>100000</td>
+            <td>1250</td>
+            <td>25%</td>
+        </tr>
+</table>
+
+    <h2>Tagihan Listrik</h2>
+    <form>
+        <label for="name">Nama Pelanggan:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="category">Kategori:</label>
+        <select name="category" id="category">
+            <option value="sosial">Sosial</option>
+            <option value="rumah">Rumah</option>
+            <option value="apartemen">Apartemen</option>
+            <option value="industri">Industri</option>
+            <option value="villa">Villa</option>
+          </select><br>
+        <label for="pemakaian">Pemakaian:</label>
+        <input type="number" id="pemakaian" name="pemakaian">
+
+        <a onclick="hitungData()">Hitung</a>
+      </form>
+      
+    <style>
+        h2 {
+            text-align: left;
+            color: #04AA6D;
+        }
+    </style>
+
+    <table>
+        <h3>Rincian Tagihan</h3>
+        <thead>
+            <tr>
+                <th>Jumlah</th>
+                <th>Tarif per-KWH</th>
+                <th>Abodemen</th>
+                <th>Sub Total</th>
+            </tr>
+            </thead>
+            <tbody id="hasil">
+                
+            </tbody>
+    </table>
+
+    <script src="build-table.js"></script>
+</body>
+
+</html>
